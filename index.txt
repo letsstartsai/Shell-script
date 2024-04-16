@@ -1,0 +1,2 @@
+hello hi
+I am new to git
