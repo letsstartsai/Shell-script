@@ -1,1 +1,1 @@
-echo "here checking is output will come or"
+echo "New to entry and see the output"
