@@ -1,2 +1,1 @@
-hello hi
-I am new to git
+Hello Hi this is new to commit
