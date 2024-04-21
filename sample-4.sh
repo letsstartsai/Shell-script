@@ -1,1 +1,0 @@
-echo "New to entry and see the output"
