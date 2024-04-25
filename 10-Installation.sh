@@ -6,6 +6,8 @@ if [ $USERID -ne 0 ]
 then 
    echo "Please run this script with root access"
 else
-   echo "Your not super user"
+   echo "Your are super user"
 fi      
 dnf install mysql -y
+
+echo "This script is proceeding "
