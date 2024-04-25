@@ -30,4 +30,4 @@ else
 fi
 
 
-echo "This script is proceeding "
+echo "This script is..END "
