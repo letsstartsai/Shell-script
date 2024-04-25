@@ -1,4 +1,4 @@
-#!/bi/bash
+#!/bi/bash  #she bang
 
 USERID=$(id -u)
 
