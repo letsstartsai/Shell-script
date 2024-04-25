@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#declaring of varible 
 PERSON1=Ravi  #no space between = and value
 PERSON2=Ramesh
 
