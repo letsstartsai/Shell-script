@@ -19,7 +19,7 @@ else
    echo "Installation of mysql.....SUCCESS"   
 fi
 
-dnf remove git -y
+dnf install git -y
 
 if [ $? -ne 0 ]
 then
