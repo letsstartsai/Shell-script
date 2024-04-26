@@ -36,4 +36,4 @@ dnf install git -y &>>$LOGFILE
 VALIDATE $? "Install git"
 
 
-echo -e "$R This script is..END $N"
+echo -e "This script is..$R END $N"
