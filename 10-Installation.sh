@@ -1,5 +1,6 @@
 #!/bi/bash  #she bang
 
+#checking user having root access or not
 USERID=$(id -u)
 
 if [ $USERID -ne 0 ]
@@ -9,6 +10,8 @@ then
 else
    echo "Your are super user"
 fi      
+#from 3rd line to upto 12th line we are checking user having root access or not
+
 dnf install mysql -y
 
 if [ $? -ne 0 ]
