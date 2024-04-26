@@ -12,4 +12,10 @@ else
 fi      
 #from 3rd line to upto 12th line we are checking user having root access or not
 
-echo "All packages: $@"
+#echo "All packages: $@"
+
+for i in $@
+do
+  echo "package to install: $i"
+
+done
