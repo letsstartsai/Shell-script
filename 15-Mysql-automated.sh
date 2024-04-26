@@ -53,5 +53,5 @@ VALIDATE $? "starting  mysql server"
      echo -e "MYSQL Root password is already setup...$Y SKIPPING $N"
  fi
 
-mysql_secure_installation --set-root-pass ExpenseApp@1 &>>$LOGFILE
-VALIDATE $? "setting up root password"
+#mysql_secure_installation --set-root-pass ExpenseApp@1 &>>$LOGFILE
+#VALIDATE $? "setting up root password"
