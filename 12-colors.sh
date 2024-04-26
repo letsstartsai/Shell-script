@@ -8,7 +8,7 @@ R="\e[31m"
 G="\e[32m"
 N="\e[0m"
 
-#echo "Script started executing at: $TIMESTAMP"
+echo "Script started executing at: $TIMESTAMP"
 
 VALIDATE(){
   if [ $1 -ne 0 ]
@@ -27,6 +27,7 @@ then
 else
    echo "Your are super user"
 fi      
+
 dnf install mysql -y &>>$LOGFILE
 VALIDATE $? "Install MYSQL"
 
@@ -34,4 +35,4 @@ dnf install git -y &>>$LOGFILE
 VALIDATE $? "Install git"
 
 
-echo -e "This script is..$R END $N"
+#echo -e "This script is..$R END $N"
