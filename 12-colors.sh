@@ -14,9 +14,8 @@ VALIDATE(){
   if [ $1 -ne 0 ]
   then 
       echo -e "$2...$R FAILURE $N"
-      
       exit 1
-  else
+    else
       echo -e "$2...$G SUCCESS $N"
   fi        
 }
@@ -24,16 +23,14 @@ VALIDATE(){
 if [ $USERID -ne 0 ]
 then 
    echo "Please run this script with root access"
-   exit 1 # manually exit if error comes
+   exit 1 #manually exit if error comes
 else
    echo "Your are super user"
 fi      
 dnf install mysql -y &>>$LOGFILE
-
 VALIDATE $? "Install MYSQL"
 
 dnf install git -y &>>$LOGFILE
-
 VALIDATE $? "Install git"
 
 
