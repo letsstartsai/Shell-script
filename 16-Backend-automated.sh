@@ -30,15 +30,20 @@ fi
 dnf module disable nodejs -y &>>LOGFILE
 VALIDATE $? "Disabling default nodejs"
 
-dnf module enable nodejs:20 -y
-VALIDATE $? "Enabling 20 version" &>>LOGFILE
+dnf module enable nodejs:20 -y &>>LOGFILE
+VALIDATE $? "Enabling 20 version" 
 
-dnf install nodejs -y
-VALIDATE $? "Installing nodejs" &>>LOGFILE
+dnf install nodejs -y &>>LOGFILE
+VALIDATE $? "Installing nodejs" 
 
-
-useradd expense 
-VALIDATE $? "Creating expense user"
+id expense
+if [ $? -ne 0 ]
+then
+    useradd expense 
+    VALIDATE $? "Creating expense user"
+else
+    echo -e "Expense user already created....$Y SKIPPING $N"    
+fi    
 
 mkdir -p /app
 VALIDATE $? "creating app directory"
