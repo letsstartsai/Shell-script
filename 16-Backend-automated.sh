@@ -53,7 +53,6 @@ fi
 mkdir -p /app
 VALIDATE $? "creating app directory"
 curl -o /tmp/backend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expense-backend-v2.zip &>>LOGFILE
-
 VALIDATE  $? "Downloading backend code"
 
 cd /app
@@ -79,7 +78,7 @@ VALIDATE $? "Enabling backend"
 dnf install mysql -y &>>LOGFILE
 VALIDATE $? "Installing mysql client"
 
-mysql -h <db.dryfruitsspices.online> -uroot -p${mysql_root_password} < /app/schema/backend.sql &>>LOGFILE
+mysql -h db.dryfruitsspices.online -u root -p${mysql_root_password} < /app/schema/backend.sql &>>LOGFILE
 VALIDATE $? "Schema loading"
 
 systemctl restart backend &>>LOGFILE
